@@ -6,7 +6,14 @@ namespace Code
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Die dieObj = new Die();
+
+            int[] arrayValues = new int[5];
+            arrayValues = dieObj.RollStandardDie();
+            foreach(int i in arrayValues)
+            {
+               Console.WriteLine(i);
+            }
         }
     }
 }
