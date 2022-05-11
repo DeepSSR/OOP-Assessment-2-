@@ -14,6 +14,11 @@ namespace Code
             {
                Console.WriteLine(i);
             }
+
+            Game gamObj = new Game();
+
+            gamObj.comparingRoll(arrayValues);
+
         }
     }
 }
