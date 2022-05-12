@@ -9,7 +9,8 @@ namespace Code
         {
             int amountDup;
             amountDup = testArray.Length - testArray.Distinct().Count();
-            Console.WriteLine(amountDup + 1);
+            Console.WriteLine("The amount of duplicates are "+ amountDup);
+            amountDup = amountDup + 1;
             scoring(amountDup);
             return amountDup;
         }
