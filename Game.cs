@@ -9,10 +9,19 @@ namespace Code
         {
             int amountDup;
             amountDup = testArray.Length - testArray.Distinct().Count();
-            Console.WriteLine("The amount of duplicates are "+ amountDup);
+            if (amountDup == 0)
+            {
+            Console.WriteLine("The amount of duplicates are "+ amountDup);                
             amountDup = amountDup + 1;
-            scoring(amountDup);
             return amountDup;
+            }
+            else
+            {
+            amountDup = amountDup + 1;
+            Console.WriteLine("The amount of duplicates are "+ amountDup);
+            return amountDup;
+            }
+            //scoring(amountDup);
         }
 
         public void reRoll()
@@ -28,18 +37,21 @@ namespace Code
             comparingRoll(arrayValues);
         }
 
-        public void scoring(int roll)
+        public int scoring(int roll)
         {
 
             if (roll < 2 )
             {
                 int score = 0;
                 Console.WriteLine("Your score is " + score);
+                return score;
             }
 
             else if (roll == 2)
             {
                 reRoll();
+                int score = 0;
+                return score;
             }
 
             else 
@@ -49,17 +61,20 @@ namespace Code
                 {
                     score = 6;
                     Console.WriteLine("Your score is " + score);
+                    return score;
                 }
 
                 else if (score == 5)
                 {
                     score = 12;
-                    Console.WriteLine("Your score is " + score);                    
+                    Console.WriteLine("Your score is " + score);   
+                    return score;                 
                 }
 
                 else
                 {
-                    Console.WriteLine("Your score is " + score);                        
+                    Console.WriteLine("Your score is " + score);             
+                    return score;           
                 }
             }
         }
