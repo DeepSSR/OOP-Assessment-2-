@@ -21,6 +21,18 @@ namespace Code
                 playerRandomNum = random.Next(1, 7);
                 dieValues[i] = playerRandomNum;
                 Console.WriteLine("You rolled a " + playerRandomNum);
+                try
+                {
+                    if (playerRandomNum <= 0 || playerRandomNum > 6)
+                    {
+                        throw new SystemException();
+                    }
+                }
+
+                catch(Exception)
+                {
+                    Console.WriteLine("ERROR - Dice > 6");
+                }
 
             }
 
@@ -42,6 +54,18 @@ namespace Code
                 playerRandomNum = random.Next(1, 7);
                 dieValues[i] = playerRandomNum;
                 Console.WriteLine("You rolled a " + playerRandomNum);
+                try
+                {
+                    if (playerRandomNum <= 0 || playerRandomNum > 6)
+                    {
+                        throw new SystemException();
+                    }
+                }
+
+                catch(Exception)
+                {
+                    Console.WriteLine("ERROR - Dice > 6");
+                }
 
             }
 

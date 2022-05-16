@@ -6,6 +6,13 @@ namespace Code
     {
         static void Main(string[] args)
         {
+            Player plyObj = new Player();
+
+            plyObj.input();
+        }
+
+        public int program()
+        {
             Die dieObj = new Die();
 
             int[] arrayValues = new int[5];
@@ -17,8 +24,12 @@ namespace Code
 
             Game gamObj = new Game();
 
-            gamObj.comparingRoll(arrayValues);
+            int dup;
+            dup = gamObj.comparingRoll(arrayValues);
 
+            int score;
+            score = gamObj.scoring(dup);
+            return score;
         }
     }
 }
